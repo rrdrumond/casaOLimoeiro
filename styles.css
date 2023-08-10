@@ -1,0 +1,904 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif; 
+    background-color: #F0F0F0;
+    margin: 0;
+    padding: 0;
+  }
+
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    border-radius: 7px;
+    overflow: hidden; 
+    position: relative;
+  }
+  
+
+
+
+/* Estilos del menú de navegación */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  background-color: #1a2337bd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.767);
+    position: fixed;
+  top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.navbar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-item {
+  margin: 0 10px;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Pacifico';
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-item a {
+  text-decoration: none;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease 0s, box-shadow 0.3s ease 0s;
+}
+
+.navbar-item a:hover {
+  background-color: #1A2337;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos del menú desplegable de header */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 125%;
+  left: 0;
+  background-color: #1A2337;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.9);
+   list-style: none;
+   z-index: 1;
+}
+
+.dropdown-menu li {
+  margin-bottom: 5px;
+}
+
+.dropdown-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-menu a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #4B5F84;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Mostrar el menú desplegable al pasar el cursor sobre el enlace */
+.dropdown:hover .dropdown-menu {
+  display: block;
+
+}
+
+
+/* Estilos del icono de hamburguesa */
+.menu-switcher-mobile {
+  display: none;
+}
+
+.menu-switcher-mobile i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.flap{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.3);
+  
+}
+
+.flap:hover{
+  border-radius: 50%;
+  transform: scale(1.2);
+  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para pantallas móviles */
+@media (max-width: 768px) {
+  .navbar {
+    display: none; 
+    position:fixed;
+    top:24px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .menu-switcher-mobile {
+    display: block; 
+    background-color: #1A2337 !important;
+    width: 100%;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+  }
+
+  .navbar.show {
+    display: block; 
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-item {
+    margin: 10px 0;
+  }
+
+  .dropdown-menu {
+    display: none; 
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+  }
+ a.whatsapp-chat {
+  width: 20px;
+  height: 20px;
+  font-size: 24px;
+  right: 10px;
+ }
+ .scroll-to-top-btn{
+  right: -5px !important;
+ }
+ .fa-bars{
+  color: #fff;
+ }
+}
+
+/* Estilos del encabezado */
+#header {
+    background-image: url(img/5.jpeg);
+    background-attachment: fixed;
+  background-repeat: no-repeat;
+    background-size: cover;
+  background-position: center;
+  background-color: #1A2337;
+  color: #ffffff;
+  padding: 20%;
+  text-align: center !important;
+  border-radius: 10px;
+    margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#title{
+  align-items: center;
+}
+
+#header img {
+  width: 200px;
+  height: 200px;
+  left: 100px;
+  border-radius: 50%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.9);
+  margin-bottom: 10px;
+  animation: float 2s ease-in-out infinite alternate;
+}
+
+h1,h2{
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 4px 6px 8px rgba(0, 0, 0, 0.703);
+  transform: 
+  translate(0%, 0%);
+  animation: 
+  morph-effect 10s
+  infinite ease-in-out;
+}
+
+h2{
+  position: relative;
+  top: -80px;
+}
+h1:nth-child(1){
+    animation-delay: -10s;
+  
+}
+
+h2:nth-child(2){
+    animation-delay: -5s;
+  
+}
+
+
+
+/* Estilos de la lista de categorías */
+.category-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #1A2337;
+    padding: 10px;
+    border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+p.category-text{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Pacifico';
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.category-item {
+  margin: 10px;
+    width: 100px;
+    height: 100px;
+  background-color: #1A2337;
+  color: #ffffff;
+  border: 2px solid white;
+  border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  box-shadow: 3px 4px 6px rgba(201, 200, 200, 0.6);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.category-item:hover {
+  background-color: #4B5F84;
+  box-shadow: 0 4px 8px rgba(154, 148, 148, 0.5);
+  transition: 1s;
+  transform: translateY(-2px);
+  
+}
+
+/* Estilos de los botones de las listas */
+.list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    filter: none;
+}
+
+
+.list-container .show{
+  filter: blur(5px)
+}
+
+
+.list-container.hidden {
+  display: none;
+}
+
+
+.object-button {
+  display: none;
+  margin: 10px;
+  padding: 10px 10px;
+  background-color: #1A2337;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: slideIn 1s forwards; 
+  width: 250px;
+  height: 60px;
+    }
+
+.object-button:hover {
+  background-color: #4B5F84;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px) !important;
+  transition: 1s;
+}
+
+/* Estilos del diálogo */
+#dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(120, 134, 107, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    display: none;
+    animation: fadeInOut 0.5s ease-in-out; 
+}
+
+#dialog.show {
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.dialog-content {
+    border-radius: 10px;
+    background-color:white; 
+    padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dialog-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.dialog-text {
+  margin-bottom: 10px;
+}
+
+
+/* Animación de los elementos dentro de dialog-content */
+.dialog-content ul {
+  animation: fadeIn 1s forwards;
+}
+
+.btn-5 {
+  width: 30px;
+  height: 20px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  background: rgb(255,27,0);
+  background: -webkit-linear-gradient(bottom,
+   rgba(255, 27, 0, 1) 0%,
+   rgba(251, 75, 2, 1) 100%);
+  background: -moz-linear-gradient(bottom, 
+   rgba(255, 27, 0, 1) 0%
+   rgba(255,75, 2, 1) 100%);
+  background: -o-linear-gradient(bottom
+   rgba(255, 27, 0,1) 0%
+   rgba(255, 75, 2, 1) 100%);
+  background: linear-gradient(to top,
+   rgba(255,27, 0, 1) 0%
+   rgba(255, 75, 2, 1) 100%);
+}
+
+.btn-5:hover {
+  color: #f0094a;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.btn-5:before, .btn-5:after{
+  content: '';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #f0094a;
+  box-shadow: -1px -1px 5px 0px #fff,
+    7px 7px 20px 0px #0003,
+    4px 4px 5px 0px #0002;
+  transition: 400ms ease all;
+}
+
+.btn-5:after{
+  right: inherit;
+  top:inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.btn-5:hover:before, .btn-5:hover:after{
+  width: 100%;
+  transition: 800ms ease all;
+}
+
+.custom-btn{
+  width: 30px;
+  height: 20px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: 500;
+  background:#f0094a;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px
+  rgba(255, 255, 255, 5), 7px 7px 20px 0px
+  rgba(0, 0, 0, .1), 4px 4px 5px 0px
+  rgba(0, 0, 0, .1);
+  outline: none;
+}
+
+.link{
+  text-decoration: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación del dialog (aparición tipo "escalada") */
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animación de la imagen */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes morph-effect {
+  0%, 20%, 100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  40%, 80%{
+    filter: blur(16px);
+    opacity: 0;
+  }
+}
+
+@keyframes dialog {
+  from {
+    font-size: 16px;
+  }
+  to {
+    font-size: 1em;
+  }
+}
+.adjustable-button:hover {
+  animation: auto-fit-font 1s ease-out;
+}
+
+
+
+
+
+
+
+
+
+/*photo secction*/
+
+.image-gallery {
+  display: flex;
+  overflow: hidden;
+}
+
+.gallery {
+    margin: 0%;
+  display: flex;
+  width: calc(200px * 9); 
+  animation: carousel 60s linear infinite; 
+}
+
+.gallery img {
+    width: 250px;
+    height: 200px;
+    margin: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+
+
+
+@keyframes carousel {
+    0% {
+    transform: translateX(0);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 0;
+    }
+  /* Desplaza las imágenes a la izquierda y luego a la derecha */
+    50% {
+    transform: translateX(calc(-200px * 3)); /* Mover las imágenes fuera del contenedor */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 0;
+    }
+    100% {
+    transform: translateX(0); /* Vuelve a la posición inicial */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 0;
+    }
+}
+
+
+
+/* Estilos para mostrar el título de la imagen en hover */
+.image-gallery {
+  position: relative;
+}
+
+.gallery img:hover::after {
+  content: attr(alt);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  
+}
+
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Desplazamiento horizontal del 100% del ancho del contenedor */
+  }
+}
+
+
+/* localidad*/
+#localidad {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: 50px 0;
+}
+
+.localidad-background {
+  width: 100%;
+  height: 115%;
+  background: url('img/Imagen\ de\ rua\ egas\ moniz\,\ página\ 1.png') center/cover;
+  background-position: -276.9px -98px!important;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px !important;
+}
+
+.localidad-background:hover{
+  transform: scale(1.1);
+  border-radius: 0px;
+}
+
+.localidad-button {
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #1A2337;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.localidad-button i {
+  font-size: 30px;
+}
+
+
+
+/* Estilos para el modal */
+.modal {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+#localidad {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url(https://www.google.com/maps/place/R.+Egas+Moniz+25,+2835-433+Lavradio/@38.6674736,-9.0546678,17z/data=!4m6!3m5!1s0xd1937b21b208d09:0xcac6457c4bf05200!8m2!3d38.6674736!4d-9.0520929!16s%2Fg%2F11cshvj_pl?entry=ttu);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.localidad-button {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  outline: none;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+  
+}
+
+.localidad-button i {
+  color: #f76b1c;
+  position: relative;
+  top: 1px;
+}
+
+#mapButton{
+  position:absolute;
+  outline: none;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+
+/* Estilos de la sección de redes sociales */
+.social-section {
+  background-color: #1A2337; 
+  padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; 
+}
+
+.social-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 10px; 
+  border-radius: 50%;
+  text-align: center !important;
+  line-height: 40px;
+  font-size: 25px;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(245, 242, 242, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+
+/* Colores de los iconos de redes sociales */
+.social-icon.facebook {
+  background-color: #1877f2; 
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.social-icon.instagram {
+  background-color: #e4405f; 
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.social-icon.gmail {
+  background-color: #d44638; 
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.social-icon.tripadvisor {
+  background-color: #00b2a9; 
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 12px 24px rgba(255, 255, 255, 0.3);
+}
+
+
+
+
+/* Estilos del footer */
+.scroll-to-top-btn {
+  position: fixed;
+  bottom: 105px;
+  right: 90px;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.019);
+  color: #1A2337;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 25px !important;
+}
+
+.scroll-to-top-btn:hover{
+  transform: scale(1.2);
+  color: #2a3753;
+}
+
+.fa-circle-arrow-up:hover{
+  border-radius: 50%;
+  box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.3);
+
+}
+
+footer {
+  background-color: #1A2337;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 0; /* Quitamos el border-radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: static;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos del botón de WhatsApp */
+.whatsapp-chat {
+  text-decoration: none;
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    width: 38px;
+    height: 38px;
+  background-color: #25d366;
+  color: #ffffff;
+  border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 45px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  animation: pulse 2s ease infinite;
+}
+
+
+.whatsapp-chat:hover {
+  background-color: #128c7e;
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animación para entrada de los botones y el cuadro de diálogo */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
