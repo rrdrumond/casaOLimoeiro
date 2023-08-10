@@ -1167,8 +1167,7 @@ function getItemFromButton(button) {
   ScrollReveal().reveal('.container', {delay:500, easing: 'ease-in'}) ; 
   ScrollReveal().reveal('.title', {delay:500, duration: 600, easing:'ease-in', interval:300, distance: '70px', origin:'top'}) ; 
   ScrollReveal().reveal('.category-btn', {delay:300, duration: 300, easing:'ease-in', interval:400, distance: '70px', origin:'right'}) ; 
-  ScrollReveal().reveal('.image-gallery', {delay:300, duration: 300, easing:'ease-out', interval:400, distance: '70px', origin:'bottom'}) ;
-  ScrollReveal().reveal('.localidad-background', {delay:500, duration: 500, easing:'ease-in', interval:400, distance: '70px',origin:'left'}) ;  
+  ScrollReveal().reveal('.image-gallery', {delay:300, duration: 300, easing:'ease-out', interval:400, distance: '70px', origin:'bottom'});  
   ScrollReveal().reveal('.footer', {delay:500, duration: 500, easing:'ease-in', interval:400, distance: '70px',origin:'bottom'}) ;  
   ScrollReveal().reveal('.scroll-to-top-btn', {delay:900, duration: 900, easing:'ease-in', interval:900, distance: '70px',origin:'bottom'}) ;  
   ScrollReveal().reveal('.social-section', {delay:400, duration: 400, easing:'ease-in', interval:400}) ;  
